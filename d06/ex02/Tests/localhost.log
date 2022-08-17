@@ -1,0 +1,13 @@
+/*C1*/SET SCHEMA SYSTEM_LOBS
+INSERT INTO BLOCKS VALUES(0,2147483647,0)
+COMMIT
+/*C2*/SET SCHEMA SYSTEM_LOBS
+set schema SYSTEM_LOBS
+DROP TABLE IF EXISTS products CASCADE
+CREATE TABLE products (\u000a                          id INTEGER IDENTITY PRIMARY KEY,\u000a                          name VARCHAR(20) NOT NULL,\u000a                          price INTEGER\u000a)
+/*C3*/SET SCHEMA PUBLIC
+DISCONNECT
+/*C2*/DROP TABLE IF EXISTS products CASCADE
+CREATE TABLE IF NOT EXISTS products (\u000a                                        id INTEGER IDENTITY PRIMARY KEY,\u000a                                        name VARCHAR(20) NOT NULL,\u000a                                        price INTEGER\u000a)
+/*C4*/SET SCHEMA PUBLIC
+DISCONNECT

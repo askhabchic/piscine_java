@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: edu.school21.repositories.EmbeddedDataSourceTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.257 s <<< FAILURE! - in edu.school21.repositories.EmbeddedDataSourceTest
+edu.school21.repositories.EmbeddedDataSourceTest.testConnection  Time elapsed: 0.255 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "javax.sql.DataSource.getConnection()" because "this.ds" is null
+	at edu.school21.repositories.EmbeddedDataSourceTest.testConnection(EmbeddedDataSourceTest.java:25)
+
